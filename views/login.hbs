@@ -1,0 +1,30 @@
+{{#if alert}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{alert}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{/if }}
+
+<div class="container px-5 mt-5" style="width:28rem">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Login</h5>
+            <form method="POST" action="/login">
+                <div class="mb-3">
+                    <label for="email" class="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Login</button>
+                <span>Don't have an account? <a href="/register">Register</a></span>
+            </form>
+        </div>
+    </div>
+    {{#if message }}
+    <h5 class="alert alert-danger mt-4">{{message}}</h5>
+    {{/if }}
+</div>

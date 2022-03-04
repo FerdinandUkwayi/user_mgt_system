@@ -1,0 +1,29 @@
+<div class="container p-4">
+    {{#each rows}}
+    <div class="column">
+        <h4 class='sideBarInfoTitle'>User Information</h4>
+        <div class='sideBarInfoWrapper'>
+            <div class='sideBarInfoItem'>
+                <span class='sideBarInfoKey'>Name:</span>
+                <span class='sideBarInfoValue'>{{this.first_name}}</span> <span
+                    class='sideBarInfoValue'>{{this.last_name}}</span>
+            </div>
+            <div class='sideBarInfoItem'>
+                <span class='sideBarInfoKey'>Email:</span>
+                <span class='sideBarInfoValue'>{{this.email}}</span>
+            </div>
+            <div class='sideBarInfoItem'>
+                <span class='sideBarInfoKey'>Phone:</span>
+                <span class='sideBarInfoValue'>{{this.phone}}</span>
+            </div>
+        </div>
+        <hr class='sideBarHr' />
+    </div>
+
+    <a href="/editprofile/{{this.id}}" type="button" class="btn btn-light btn-small"><i
+            class="bi bi-pencil"></i>Edit Profile</a>
+
+    {{!-- <a href="{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Delete Profile</a> --}}
+
+    {{/each}}
+</div>

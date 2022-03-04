@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">User Management System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/register">Register</a>
+                </li>
+        </div>
+    </div>
+</nav>
+
+{{#if removedUser}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    User has been removed.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if }}
+
+<div class="container p-4">
+    <h1>Technify Incubator Task</h1>
+    <h3>As Designed by Ukwayi Ferdinand</h3>
+    <ul>
+        <li>Click Register to Create a profile</li>
+        <li>Click Login if already registered</li>
+    </ul>
+</div>
+
+{{!-- <div class="container">
+    <h2>Welcome</h2>
+    <table class="table">
+        <thead class="th-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Profile Photo</th>
+                <th scope="col" class="text-end">Action</th>
+    
+            </tr>
+        </thead>
+        <tbody class="table table bordered">
+            {{#each rows}}
+            <tr>
+                <th scope="row">{{this.id}}</th>
+                <td>{{this.first_name}}</td>
+                <td>{{this.last_name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.profile_img}}</td>
+                <td class="text-end">
+                    <a href="/viewprofile/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i>View</a>
+                    <a href="/editprofile/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>Edit</a>
+                    <a href="{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i>Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div> --}}

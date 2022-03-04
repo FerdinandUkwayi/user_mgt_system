@@ -1,0 +1,11 @@
+
+    
+    <div class="container w-250">
+        {{req.query.id}}
+        <form ref='uploadForm' id='uploadForm' action='/viewprofile' method='post'
+            encType="multipart/form-data">
+            <input type="file" name="sampleFile" />
+            <input type='submit' value='Upload!' />
+        </form>
+
+    </div>

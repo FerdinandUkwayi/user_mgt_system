@@ -1,0 +1,75 @@
+{{#each rows}}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">User Management System </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/viewprofiledetail/{{this.id}}">User
+                        Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Logout</a>
+                </li>
+        </div>
+    </div>
+</nav>
+
+{{!-- {{#if message}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    No immage uploaded!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if }} --}}
+
+
+<div class="d-flex p-4 ">
+    <div class="flex-grow-1">
+        <h2>{{this.first_name}}</h2>
+        <p>Welcome to your profile Page</p>
+    </div>
+    <div class="flex">
+        <div class="border"
+            style="width: 200px; position: relative; height: 200px; border-radius: 50%; border: 2px solid gray">
+            <img src="/{{this.profile_img}}" style="object-fit: cover" alt="Profile picture"/>
+
+            <a href="/profile_photo/{{this.id}}" type="button"
+                style="position:absolute; margin: auto; left: 0; bottom: 0; " class="btn btn-light btn-small"><i
+                    class="bi bi-pencil"></i>Upload Photo</a>
+        </div>
+
+
+    </div>
+
+</div>
+
+{{/each}}
+
+
+
+
+
+
+
+
+
+{{!--
+{{#if this.profile_img}}
+<img class="card-img-top" src={{this.profile_img}} alt="Card image">
+{{else}}
+<img class="card-img-top" src="" alt="Card image">
+{{/if}}
+
+<h4 class="card-title">{{this.first_name}}</h4>
+<p class="card-text">Some example text.</p>
+<a href="/viewprofiledetail/{{this.id}}" class="btn btn-primary">See Profile</a>
+
+
+
+<div class="row">
+    <h3>Feeds</h3>
+</div> --}}
